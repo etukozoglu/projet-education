@@ -1,3 +1,18 @@
+/* Style globale___________________________*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans empattement ;
+    font-size: 14px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
 /* Style de la home page ___________________________*/
 
 
@@ -9,6 +24,39 @@
 
 
 /* Style de la fiche de l'établissement _____________________*/
+
+header {
+    border : solid black;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Montserrat',sans empattement ;
+}
+
+.title_etablissement {
+    border : solid black;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.container_etablissement {
+    border : solid yellow;
+}
+
+.name_etablissement {
+    border : solid brown;
+    text-align: center;
+}
+
+.item {
+
+}
+
 
 
 
