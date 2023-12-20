@@ -1,4 +1,4 @@
-/* Style globale___________________________*/
+/* _____________________Style globale_____________________*/
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
 
 }
 
-/* Style de la home page ___________________________*/
+/*_____________________ Style de la home page _____________________*/
 
 
 
@@ -23,7 +23,7 @@ body {
 
 
 
-/* Style de la fiche de l'établissement _____________________*/
+/* _____________________Style de la fiche de l'établissement _____________________*/
 
 header {
     border : solid black;
@@ -89,7 +89,7 @@ h1 {
 
 
 
-/* Style de la liste des favoris _____________________*/
+/* _____________________Style de la liste des favoris _____________________*/
 
 
 
@@ -99,114 +99,50 @@ h1 {
 
 
 
-/* Style de la map _____________________*/
+/*_____________________ Style de la map _____________________*/
 
+h2 {
+    margin-top: 3rem;
+    font-weight: 300;
+    padding: 30px 10%;
+    font-size: 30px;
+    font-family: 'Montserrat',sans empattement ;
+}
 
 
 
+a button{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
 
 
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 10%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Media query_________________*/
-
-@media  screen and (min-width : 500px) and (max-width : 700px) {
-    .container_etablissement {
-        border : solid blue;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 15%;
-        margin-left: 0;
-        gap : 20px;
-        justify-content: space-between;
-        transform: translate(20px, 20px);
-        width: 60%;
-        background-color: white;
-        padding: 20px 90px;
-        border-radius: 5px;
-        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    
-    }
-    .container-display-flex {
-        border : solid black;
-    }
-    
-    .item {
-        border-radius: 10px;
-        line-height: auto;
-        margin: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        padding : 5px 10px;
-        
+button {
+    padding: 9px 25px;
+    background-color: rgb(186, 183, 188);
+    border: none;
+    border-radius: 50px;
+}
+.map {
+    margin-top: 3rem;
+    background-color: #c4c0c0;
     }
 
+.map img {
+    width: 50%;
+    border-radius: 20px;
+    padding: 30px 10%;
+}
+
+.Logo {
+width: 20%;
 }
