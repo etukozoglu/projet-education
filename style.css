@@ -2,31 +2,163 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans empattement ;
+    font-family: 'Roboto', sans empattement;
     font-size: 14px;
 }
+
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-
 }
 
 /* Style de la home page ___________________________*/
 
+h1 {
+    color: #F00020;
+    text-align: center;
+    margin: 50px;
+
+}
+
+.search-bar {
+    display: flex;
+    /* Conteneur flexible */
+    flex-direction: row;
+    /* Disposition en ligne pour empiler les éléments verticalement */
+    align-items: center;
+    /* Centrer les éléments horizontalement */
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #F00020;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF3347;
+    /* Changement de couleur au survol */
+}
 
 
+/* Style de la card sur la home page*/
 
+.card {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.card-header {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.name-school {
+    flex: 1;
+}
+
+.card-title {
+    color: #0F056B;
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    padding-right: 1rem;
+    text-decoration: none;
+    will-change: transform;
+}
+
+.mini-title {
+    color: #0F056B;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+}
+
+.card-meta {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.school-type {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.location {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.icon-more-inside {
+    background-color: #F00020;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-see-more {
+    background-color: #F00020;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
 
 
 
 /* Style de la fiche de l'établissement _____________________*/
 
 header {
-    border : solid black;
+    border: solid black;
     margin: 0;
     padding: 0;
     background-color: aqua;
@@ -34,46 +166,89 @@ header {
 
 h1 {
     font-size: 30px;
-    font-family: 'Montserrat',sans empattement ;
+    font-family: 'Montserrat', sans empattement;
 }
 
 .title_etablissement {
-    border : solid black;
+    border: solid black;
     text-align: center;
     padding: 30px;
     margin-top: 30px;
 }
 
 .container_etablissement {
-    border : solid yellow;
+    border: solid yellow;
 }
 
 .name_etablissement {
-    border : solid brown;
+    border: solid brown;
     text-align: center;
 }
 
-.item {
-
-}
 
 
 
-
-
-
-
-
-
-
-/* Style de la liste des favoris _____________________*/
-
-
-
-
-
-
+/* Style de la liste des favoris ___MEME QUE LA CARD SUR LA HOME PAGE___*/
 
 
 
 /* Style de la map _____________________*/
+
+
+
+/* Contraintes pour Desktop */
+@media screen and (min-width: 992px) {
+    body {
+        max-width: 1200px;
+        /* Limiter la largeur de la page à 1200px */
+    }
+
+    .container {
+        margin-right: 30px;
+    }
+
+    input #type-search {
+        width: 100%;
+        /* Utilisez width au lieu de box-sizing pour définir la largeur */
+        box-sizing: border-box;
+        /* Assurez-vous que la largeur inclut la bordure et le rembourrage */
+    }
+
+}
+
+/*Mobile responsive and application des contraintes */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 50px;
+        font-size: 14px;
+        max-width: 100%;
+        /* Largeur maximale du corps */
+        margin: 0 auto;
+        /* Centrer horizontalement */
+    }
+
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        /* Pour mobile, affichez les éléments en colonne */
+        margin: 20px;
+        /* Ajout de marges pour un meilleur espacement */
+        align-items: center;
+    }
+
+
+    input#type-search,
+    input#location-search {
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        /* Ajout d'une marge entre les champs de recherche */
+        border: solid #000000 1.5px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
