@@ -99,7 +99,7 @@ button:hover {
 .mini-title {
     color: #0F056B;
     margin: 10px;
-    justify-content: ;
+
 }
 
 svg {
@@ -282,6 +282,20 @@ a.title-header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+gmp-map {
+    height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
