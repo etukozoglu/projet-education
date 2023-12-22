@@ -270,19 +270,16 @@ a.title-header {
 /*_____________________ Style de la map _____________________*/
 
 
+
+
+
 .map {
     margin-top: 3rem;
-    background-color: #c4c0c0;
+    width: 100%;
+    height: 400px;
+    background: #d6d6d6;
 }
 
-.map img {
-    width: 50%;
-    border-radius: 20px;
-    padding: 30px 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */

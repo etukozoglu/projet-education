@@ -50,14 +50,17 @@
         </article>
 
 
-        <section class="map">
-            <script async
-                src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
-                </script>
-            <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID">
-                <gmp-advanced-marker position="40.12150192260742,-100.45039367675781" title="My location">
-                </gmp-advanced-marker>
-            </gmp-map>
+        <section id="map">
+            <iframe
+          width="600"
+          height="450"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCXH4bZNmIDwYr29j2nJvzzLCTiS2yo4M0
+            &q=Space+Needle,Seattle+WA">
+        </iframe>
         </section>
 </body>
 
