@@ -12,29 +12,27 @@
 </head>
 
 <body>
-
-
     <main>
-
         <header class="header">
-            <img class="logo" src="assets/logo.webp" alt="icon 640x360">
-            <a class="title-header" href="#">Trouve ton école</a>
+            <a href="./index.html">
+                <img class="logo" src="assets/logo.webp" alt="icon 640x360"></a>
+            <a class="title-header" href="./index.html">Trouve ton école</a>
             <div class="spacing"></div>
             <nav class="nav-links mobile-menu">
-                <a href="http://127.0.0.1:5500/favoris.html"><button>Vos Favoris</button></a>
+                <button id="goFavoris">Vos Favoris</button>
             </nav>
             <img class="menu-burger" src="assets/burger-icone.webp" alt="menu">
         </header>
-
         <h1>Vos Favoris</h1>
-
-        <section class="card-list">
-            <article class="card">
+        <section id="section" class="card-list">
+            <article class="card article">
                 <div class="card-header">
                     <div class="name-school">
-                        <a class="card-title" href="#">Nom de l'établissement</a>
+                        <!--<a class="card-title" href="#">Nom de l'établissement</a>-->
+                        <span class="card-title data-etablishment">XXXXXXXX</span>
                     </div>
-                    <button class="icon-button">
+
+                    <button class="icon-button" onclick="favoriser">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             display="block" id="Heart">
@@ -54,72 +52,13 @@
                             <circle cx="14" cy="10" r="2" fill="#3498db" />
                         </svg>
                         <span class="mini-title">Adresse de l’école :</span>
+                        <span class="mini-title data-address">XXXXXX</span>
                     </div>
-                    <button class="icon-more-inside">Voir la localisation</button>
+                    <button class="icon-more-inside localiser">Voir la localisation</button>
                 </div>
             </article>
-
-            <section class="card-list">
-                <article class="card">
-                    <div class="card-header">
-                        <div class="name-school">
-                            <a class="card-title" href="#">Nom de l'établissement</a>
-                        </div>
-                        <button class="icon-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" display="block" id="Heart">
-                                <path
-                                    d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="card-meta">
-                        <div class="school-type">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" display="block" id="SchoolIcon">
-                                <rect x="2" y="9" width="20" height="12" />
-                                <path d="M12 2L20 9L12 16L4 9L12 2Z" />
-                                <circle cx="10" cy="10" r="2" fill="#3498db" />
-                                <circle cx="14" cy="10" r="2" fill="#3498db" />
-                            </svg>
-                            <span class="mini-title">Adresse de l’école :</span>
-                        </div>
-                        <button class="icon-more-inside">Voir la localisation</button>
-                    </div>
-                </article>
-
-                <section class="card-list">
-                    <article class="card">
-                        <div class="card-header">
-                            <div class="name-school">
-                                <a class="card-title" href="#">Nom de l'établissement</a>
-                            </div>
-                            <button class="icon-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" display="block" id="Heart">
-                                    <path
-                                        d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="card-meta">
-                            <div class="school-type">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" display="block" id="SchoolIcon">
-                                    <rect x="2" y="9" width="20" height="12" />
-                                    <path d="M12 2L20 9L12 16L4 9L12 2Z" />
-                                    <circle cx="10" cy="10" r="2" fill="#3498db" />
-                                    <circle cx="14" cy="10" r="2" fill="#3498db" />
-                                </svg>
-                                <span class="mini-title">Adresse de l’école :</span>
-                            </div>
-                            <button class="icon-more-inside">Voir la localisation</button>
-                        </div>
-                    </article>
+        </section>
+        <script src="scripts/fetching.js"></script>
 </body>
 
 </html>

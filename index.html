@@ -14,11 +14,12 @@
 <body>
 
     <header class="header">
-        <img class="logo" src="assets/logo.webp" alt="icon 640x360">
-        <a class="title-header" href="#">Trouve ton école</a>
+        <a href="./index.html">
+            <img class="logo" src="assets/logo.webp" alt="icon 640x360"></a>
+        <a class="title-header" href="./index.html">Trouve ton école</a>
         <div class="spacing"></div>
         <nav class="nav-links mobile-menu">
-            <button>Vos Favoris</button>
+            <button id="goFavoris">Vos Favoris</button>
         </nav>
         <img class="menu-burger" src="assets/burger-icone.webp" alt="menu">
     </header>
@@ -26,25 +27,28 @@
     <main>
         <h1>Recherchez votre établissement</h1>
         <section class="search-bar">
-            <div class="container">
-                <label for="type-search">Type d’établissement</label>
-                <input type="search" id="type-search" name="type" />
-            </div>
-            <div class="container">
-                <label for="location-search">Lieu</label>
-                <input type="search" id="location-search" name="lieu" />
-            </div>
-            <button>Rechercher</button>
+            <form class="search-bar" id="formElem" action="">
+                <div class="container">
+                    <label for="typeShool">Type d’établissement</label>
+                    <input type="search" id="typeShool" name="typeShool" />
+                </div>
+                <div class="container">
+                    <label for="town">Lieu</label>
+                    <input type="search" id="town" name="town" />
+                </div>
+                <button type="submit searching">Rechercher</button>
+            </form>
         </section>
 
 
-        <section class="card-list">
-            <article class="card">
+        <section id="section" class="card-list">
+            <article class="card article " hidden>
                 <div class="card-header">
                     <div class="name-school">
-                        <a class="card-title" id="etablissements-list" href="#">Nom de l'établissement</a>
+                        <!--<a class="card-title" href="#">Nom de l'établissement</a>-->
+                        <span class="card-title data-etablishment">XXXXXXXX</span>
                     </div>
-                    <button class="icon-button">
+                    <button class="icon-button favoris">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             display="block" id="Heart">
@@ -63,7 +67,8 @@
                             <circle cx="10" cy="10" r="2" fill="#3498db" />
                             <circle cx="14" cy="10" r="2" fill="#3498db" />
                         </svg>
-                        <span class="mini-title">Type d'établissement :</span>
+                        <span class="mini-title">Type d'école :</span>
+                        <span class="mini-title data-nature">XXXXXX</span>
                     </div>
                     <div class="location">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -74,96 +79,18 @@
                                 d="M12 2c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zM12 20a8 8 0 0 0 8-8c0-4.42-3.58-8-8-8s-8 3.58-8 8a8 8 0 0 0 8 8z"
                                 fill="#fff" />
                         </svg>
-                        <span class="mini-title">Arr :</span>
+                        <span class="mini-title">Arrondissement :</span>
+                        <span class="mini-title data-address">XXXXXX</span>
                     </div>
-                    <button class="icon-more-inside">Voir +</button>
+                    <button class="icon-more-inside details">Voir +</button>
                 </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <a class="card-title" href="#">Nom de l'établissement</a>
-                    <button class="icon-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            display="block" id="Heart">
-                            <path
-                                d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="card-meta">
-                    <div class="school-type">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            display="block" id="SchoolIcon">
-                            <rect x="2" y="9" width="20" height="12" />
-                            <path d="M12 2L20 9L12 16L4 9L12 2Z" />
-                            <circle cx="10" cy="10" r="2" fill="#3498db" />
-                            <circle cx="14" cy="10" r="2" fill="#3498db" />
-                        </svg>
-                        <span class="mini-title">Type d'établissement :</span>
-                    </div>
-                    <div class="location">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            display="block" id="Location">
-                            <circle cx="12" cy="12" r="8" fill="#F00020" />
-                            <path
-                                d="M12 2c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zM12 20a8 8 0 0 0 8-8c0-4.42-3.58-8-8-8s-8 3.58-8 8a8 8 0 0 0 8 8z"
-                                fill="#fff" />
-                        </svg>
-                        <span class="mini-title">Arr :</span>
-                    </div>
-                </div>
-                <button class="icon-more-inside">Voir +</button>
-            </article>
-
-
-            <article class="card">
-                <div class="card-header">
-                    <a class="card-title" href="#">Nom de l'établissement</a>
-                    <button class="icon-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            display="block" id="Heart">
-                            <path
-                                d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="card-meta">
-                    <div class="school-type">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            display="block" id="SchoolIcon">
-                            <rect x="2" y="9" width="20" height="12" />
-                            <path d="M12 2L20 9L12 16L4 9L12 2Z" />
-                            <circle cx="10" cy="10" r="2" fill="#3498db" />
-                            <circle cx="14" cy="10" r="2" fill="#3498db" />
-                        </svg>
-                        <span class="mini-title">Type d'établissement :</span>
-                    </div>
-                    <div class="location">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            display="block" id="Location">
-                            <circle cx="12" cy="12" r="8" fill="#F00020" />
-                            <path
-                                d="M12 2c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zM12 20a8 8 0 0 0 8-8c0-4.42-3.58-8-8-8s-8 3.58-8 8a8 8 0 0 0 8 8z"
-                                fill="#fff" />
-                        </svg>
-                        <span class="mini-title">Arr :</span>
-                    </div>
-                </div>
-                <button class="icon-more-inside">Voir +</button>
             </article>
         </section>
 
-        <button class="icon-see-more">Voir plus</button>
+        <button class="icon-see-more morePlus">Voir plus</button>
 
     </main>
-    <script src="index.js"></script>
+    <script src="scripts/fetching.js"></script>
 </body>
 
 </html>
