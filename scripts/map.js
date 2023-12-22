@@ -33,16 +33,6 @@ const renderData = (data) => {
     console.log(data)
     // cardList.innerHTML = '';
     const interObject = data.record.fields;
-    const maternelle = interObject.ecole_maternelle;
-    const elementaire = interObject.ecole_elementaire;
-    let getElementaireOuMaternelle;
-    if (maternelle === 1 && elementaire === 0) {
-        getElementaireOuMaternelle = 'Maternelle';
-    } else if (maternelle === 0 && elementaire === 1) {
-        getElementaireOuMaternelle = 'Élémentaire';
-    } else if (maternelle === 1 && elementaire === 1) {
-        getElementaireOuMaternelle = 'Polyvalent';
-    };
 
 
     // Ajoutez ces lignes pour récupérer les données de latitude et longitude
